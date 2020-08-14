@@ -553,8 +553,17 @@ textarea:focus {
     position: relative;
     z-index: 1;
     height: 800px;
+    background-image: linear-gradient(to right bottom, rgba($color-grey-dark, .6), rgba($color-primary, .4)),
+    url(/img/bg-img/good2mod2.jpg);
+  @media #{$breakpoint-md} {
+      background-image: linear-gradient(to right bottom, rgba($color-grey-light-2, .6), rgba($color-grey-dark, .4)),
+      url(/img/bg-img/good2mod2crop.jpg);
+    }
+
     @media #{$breakpoint-xs} {
         height: 600px;
+      background-image: linear-gradient(to right bottom, rgba($color-grey-light-2, .6), rgba($color-grey-dark, .4)),
+      url(/img/bg-img/good2mod2crop.jpg);
     }
     .hero-content {
         position: relative;
