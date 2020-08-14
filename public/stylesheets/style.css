@@ -682,13 +682,16 @@ textarea:focus {
           margin-bottom: 0; }
         .hero-area .hero-content .contact-info a:hover, .hero-area .hero-content .contact-info a:focus {
           color: #ff9a27; }
-    .hero-area .hero-content .social-info a {
-      color: white;
-      display: inline-block;
-      padding-right: 20px;
-      font-size: 14px; }
-      .hero-area .hero-content .social-info a:hover, .hero-area .hero-content .social-info a:focus {
-        color: #ff9a27; }
+    .hero-area .hero-content .social-info {
+      width: 266px;
+      display: flex;
+      justify-content: space-between; }
+      .hero-area .hero-content .social-info a {
+        color: white;
+        display: inline-block;
+        font-size: 16px; }
+        .hero-area .hero-content .social-info a:hover, .hero-area .hero-content .social-info a:focus {
+          color: #ff9a27; }
   .hero-area.horizontal {
     position: relative;
     z-index: 10;

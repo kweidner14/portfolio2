@@ -632,11 +632,13 @@ textarea:focus {
             }
         }
         .social-info {
+          width: 266px;
+          display: flex;
+          justify-content: space-between;
             a {
                 color: white;
                 display: inline-block;
-                padding-right: 20px;
-                font-size: 14px;
+                font-size: 16px;
                 &:hover,
                 &:focus {
                     color: $bg-default;
