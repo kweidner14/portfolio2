@@ -851,6 +851,10 @@ textarea:focus {
         z-index: 5;
         overflow: hidden;
         margin: 30px 0;
+        a {
+          display: block;
+          width: 75%;
+        }
         h5 {
             font-weight: 600;
             font-size: 20px;

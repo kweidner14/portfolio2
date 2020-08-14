@@ -39,6 +39,9 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.3);
     transition: all .4s .2s; }
+    @media only screen and (max-width: 37.5em) {
+      .popup__content {
+        height: 90% !important; } }
   .popup__left {
     width: 33.33333%;
     height: 100%; }
@@ -69,6 +72,9 @@
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto; }
+    @media only screen and (max-width: 37.5em) {
+      .popup__text {
+        margin-bottom: 0 !important; } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -845,6 +851,9 @@ textarea:focus {
     z-index: 5;
     overflow: hidden;
     margin: 30px 0; }
+    .single-portfolio-area .portfolio-content a {
+      display: block;
+      width: 75%; }
     .single-portfolio-area .portfolio-content h5 {
       font-weight: 600;
       font-size: 20px;

@@ -35,6 +35,10 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(.3);
     transition: all .4s .2s; // .2s is transition-delay
+
+    @include respond(phone) {
+      height: 90% !important;
+    }
   }
 
   &__left {
@@ -79,6 +83,10 @@
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
+
+    @include respond(phone) {
+      margin-bottom: 0 !important;
+    }
   }
 
   &:target {
