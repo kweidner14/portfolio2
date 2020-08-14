@@ -28,6 +28,18 @@ app.use(sassMiddleware({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// URL Redirection HTTPS
+app.use((req, res, next) => {
+  if (process.env.NODE_ENV === 'production') {
+    if (req.headers['x-forwarded-proto'] !== 'https')
+        // the statement for performing our redirection
+      return res.redirect('https://' + req.headers.host + req.url);
+    else
+      return next();
+  } else
+    return next();
+});
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
