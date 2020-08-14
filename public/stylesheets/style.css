@@ -623,6 +623,7 @@ textarea:focus {
     position: relative;
     z-index: 1; }
     .hero-area .hero-content h5 {
+      color: white;
       font-size: 22px;
       font-style: italic;
       margin-bottom: 10px;
@@ -646,6 +647,7 @@ textarea:focus {
           margin-left: -2px;
           margin-bottom: 2px; } }
     .hero-area .hero-content h3 {
+      color: white;
       margin-top: 2rem;
       margin-bottom: 0;
       font-size: 30px;
@@ -675,6 +677,7 @@ textarea:focus {
         .hero-area .hero-content .contact-info a:hover, .hero-area .hero-content .contact-info a:focus {
           color: #ff9a27; }
     .hero-area .hero-content .social-info a {
+      color: white;
       display: inline-block;
       padding-right: 20px;
       font-size: 14px; }
