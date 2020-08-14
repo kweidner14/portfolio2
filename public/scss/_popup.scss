@@ -1,0 +1,251 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-black, .8);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+
+  // Progressive Enhancement
+  // ** This code is ONLY supported on Safari **
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-black, .3);
+  }
+
+
+  &__content {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    height: 88%;
+    background-color: $color-white;
+    box-shadow: 0 2rem 4rem rgba($color-black, .2);
+    border-radius: 1rem;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.3);
+    transition: all .4s .2s; // .2s is transition-delay
+  }
+
+  &__left {
+    width: 33.33333%;
+    height: 100%;
+  }
+
+  &__right {
+    width: 66.66667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+  }
+
+  &__img {
+    height: 47%;
+    border-radius: 1rem;
+    margin: 1rem;
+    box-shadow: 0 .3rem .3rem rgba($color-black, .3);
+
+    &--2 {
+      height: 47%;
+      border-radius: 1rem;
+      margin: 0 1rem 1rem 1rem;
+      box-shadow: 0 .3rem .3rem rgba($color-black, .3);
+
+    }
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+
+    column-count: 2;
+    -webkit-column-gap: 4rem;
+    -moz-column-gap: 4rem;
+    column-gap: 4rem;
+    column-rule: 1px solid $color-grey-light-2;
+
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: $color-grey-dark;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all .2s;
+      line-height: 1;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &--outer {
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: default;
+    }
+  }
+
+  @include respond(laptop) {
+    &__content {
+      height: 75%;
+    }
+    &__right {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h5 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  @include respond(hdtv) {
+    &__content {
+      width: 85%;
+      height: 85%;
+    }
+  }
+
+  @include respond(tab-land) {
+    &__content {
+      width: 85%;
+    }
+
+    &__left {
+      display: none;
+      width: 100%;
+      height: 20vh;
+    }
+
+    &__right {
+      width: 100%;
+      display: block;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h5 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    &__img {
+      display: flex;
+      float: left;
+      object-fit: cover;
+      height: 20vh;
+    }
+
+    &__text {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+    }
+  }
+
+  @include respond(tab-port) {
+
+    &__right {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @include respond(phone) {
+    &__right {
+      padding: 2rem 1rem;
+
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      h5 {
+        font-size: .8rem;
+      }
+
+      p {
+        font-size: .8rem;
+      }
+    }
+    &__close {
+      &:link,
+      &:visited {
+        top: 0;
+        right: .5rem;
+      }
+    }
+  }
+  @include respond(phone-land) {
+    &__right {
+      h1 {
+        font-size: 1rem;
+      }
+      h5 {
+        font-size: .7rem;
+      }
+      p {
+        font-size: .7rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+  @include respond(phone-land-sm) {
+    h1 {
+      font-size: 1rem;
+    }
+    h5 {
+      font-size: .7rem;
+    }
+    p {
+      font-size: .7rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.portfolio-btn {
+  text-align: center;
+}
