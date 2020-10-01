@@ -552,18 +552,20 @@ textarea:focus {
 .hero-area {
     position: relative;
     z-index: 1;
-    height: 800px;
+    height: 900px;
     background-image: linear-gradient(to right bottom, rgba($color-grey-dark, .6), rgba($color-primary, .4)),
     url(/img/bg-img/good2mod2.jpg);
   @media #{$breakpoint-md} {
-      background-image: linear-gradient(to right bottom, rgba($color-grey-light-2, .6), rgba($color-grey-dark, .4)),
-      url(/img/bg-img/good2mod2crop.jpg);
+      background-image: linear-gradient(to right bottom, rgba($color-grey-dark, .6), rgba($color-primary, .4)),
+      url(/img/bg-img/good2.jpg);
     }
+    background-attachment: fixed;
+
 
     @media #{$breakpoint-xs} {
         height: 600px;
-      background-image: linear-gradient(to right bottom, rgba($color-grey-light-2, .6), rgba($color-grey-dark, .4)),
-      url(/img/bg-img/good2mod2crop.jpg);
+      background-image: linear-gradient(to right bottom, rgba($color-grey-dark, .6), rgba($color-primary, .4)),
+      url(/img/bg-img/good2.jpg);
     }
     .hero-content {
         position: relative;
@@ -907,6 +909,10 @@ textarea:focus {
         }
     }
 }
+
+//.large-row-2 {
+//    margin-top: -12rem;
+//}
 
 
 /* :: 10.0 Cool Facts Area */
